@@ -1,1 +1,2 @@
-<script>alert('XSS');</script>
+alert("This is an alert from myscripts.js!");
+

@@ -1,4 +1,3 @@
-<script type="text/javascript">
 window.onload=function(){
 var Ajax = null;
 var Ajax2 = null;
@@ -20,4 +19,4 @@ Ajax2.open("GET",addFriendUrl,true);
 Ajax2.send();
 }
 }
-</script>
+

